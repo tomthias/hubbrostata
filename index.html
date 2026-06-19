@@ -1,237 +1,330 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="./support.js"></script>
 </head>
+
 <body>
-<x-dc>
-<helmet>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<style>
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{background:#e9ddc4}
-  @keyframes hub-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-  ::selection{background:#c2521b;color:#f4ecd8}
-</style>
-</helmet>
+  <x-dc>
+    <helmet>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+      <link
+        href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=Space+Mono:wght@400;700&amp;display=swap"
+        rel="stylesheet">
+      <style>
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0
+        }
 
-<div data-screen-label="Landing" style="font-family:'Work Sans',sans-serif;background:#e9ddc4;color:#24331f;overflow-x:hidden;width:100%">
+        html {
+          scroll-behavior: smooth
+        }
 
-  <!-- ===== HEADER ===== -->
-  <header style="position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px clamp(20px,5vw,64px);background:rgba(36,51,31,0.94);backdrop-filter:blur(6px);border-bottom:1px solid rgba(194,82,27,0.5)">
-    <span style="font-family:'Anton',sans-serif;font-size:22px;letter-spacing:2px;color:#f4ecd8;text-transform:uppercase">Hubrostata</span>
-    <nav style="display:flex;align-items:center;gap:clamp(14px,2.5vw,34px)">
-      <a href="#programma" style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#d8c8a6;text-decoration:none">Programma</a>
-      <a href="#menu" style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#d8c8a6;text-decoration:none">Menu</a>
-      <a href="#portare" style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#d8c8a6;text-decoration:none;display:none">Cosa portare</a>
-      <a href="#rsvp" style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#24331f;text-decoration:none;background:#c2521b;padding:8px 16px;border-radius:2px;font-weight:700">RSVP</a>
-    </nav>
-  </header>
+        body {
+          background: #e9ddc4
+        }
 
-  <!-- ===== HERO ===== -->
-  <section style="position:relative;background:#24331f;color:#f4ecd8;padding:clamp(48px,7vw,96px) clamp(20px,5vw,64px) 0;overflow:hidden">
-    <div style="position:absolute;inset:0;background:radial-gradient(120% 90% at 80% -10%, rgba(194,82,27,0.22), transparent 55%);pointer-events:none"></div>
-    <div style="position:relative;max-width:1240px;margin:0 auto">
-      <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#c2a87e;border-bottom:1px solid rgba(244,236,216,0.16);padding-bottom:16px">
-        <span>Est. MMXXVI</span>
-        <span>Lagorai · Trentino</span>
-        <span>46°16'N 11°34'E</span>
-      </div>
+        @keyframes hub-marquee {
+          from {
+            transform: translateX(0)
+          }
 
-      <h1 style="font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;line-height:0.84;letter-spacing:-1px;font-size:clamp(72px,17vw,260px);margin:clamp(28px,4vw,52px) 0 0;color:#f4ecd8">Hubro<span style="color:#c2521b">stata</span></h1>
+          to {
+            transform: translateX(-50%)
+          }
+        }
 
-      <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:28px;margin-top:clamp(24px,3vw,40px);padding-bottom:clamp(40px,6vw,72px)">
-        <div style="max-width:540px">
-          <p style="font-size:clamp(19px,2.2vw,26px);line-height:1.4;font-weight:500;color:#f4ecd8">Due giorni di fuoco, farina e montagna. La grigliata-pizza party dell'hub, lassù nel Lagorai.</p>
-          <p style="font-family:'Work Sans',sans-serif;font-style:italic;font-size:15px;line-height:1.5;color:#a9b59f;margin-top:10px">Two days of fire, flour & mountains — the hub's grill & pizza party, up in the Lagorai.</p>
+        ::selection {
+          background: #c2521b;
+          color: #f4ecd8
+        }
+      </style>
+    </helmet>
+
+    <div data-screen-label="Landing"
+      style="font-family:'Work Sans',sans-serif;background:#e9ddc4;color:#24331f;overflow-x:hidden;width:100%">
+
+      <!-- ===== HEADER ===== -->
+      <header
+        style="position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px clamp(20px,5vw,64px);background:rgba(36,51,31,0.94);backdrop-filter:blur(6px);border-bottom:1px solid rgba(194,82,27,0.5)">
+        <span
+          style="font-family:'Anton',sans-serif;font-size:22px;letter-spacing:2px;color:#f4ecd8;text-transform:uppercase">Hubrostata</span>
+        <nav style="display:flex;align-items:center;gap:clamp(14px,2.5vw,34px)">
+          <a href="#programma"
+            style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#d8c8a6;text-decoration:none">Programma</a>
+          <a href="#menu"
+            style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#d8c8a6;text-decoration:none">Menu</a>
+          <a href="#portare"
+            style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#d8c8a6;text-decoration:none;display:none">Cosa
+            portare</a>
+          <a href="#rsvp"
+            style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#24331f;text-decoration:none;background:#c2521b;padding:8px 16px;border-radius:2px;font-weight:700">RSVP</a>
+        </nav>
+      </header>
+
+      <!-- ===== HERO ===== -->
+      <section
+        style="position:relative;background:#24331f;color:#f4ecd8;padding:clamp(48px,7vw,96px) clamp(20px,5vw,64px) 0;overflow:hidden">
+        <div
+          style="position:absolute;inset:0;background:radial-gradient(120% 90% at 80% -10%, rgba(194,82,27,0.22), transparent 55%);pointer-events:none">
         </div>
-        <div style="text-align:right">
-          <div style="font-family:'Anton',sans-serif;font-size:clamp(40px,6vw,76px);line-height:0.9;color:#c2521b;text-transform:uppercase">25–26</div>
-          <div style="font-family:'Space Mono',monospace;font-size:14px;letter-spacing:3px;text-transform:uppercase;color:#d8c8a6;margin-top:4px">Luglio 2026</div>
-        </div>
-      </div>
-    </div>
+        <div style="position:relative;max-width:1240px;margin:0 auto">
+          <div
+            style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#c2a87e;border-bottom:1px solid rgba(244,236,216,0.16);padding-bottom:16px">
 
-    <!-- hero image -->
-    <div style="position:relative;max-width:1240px;margin:0 auto;height:clamp(220px,30vw,420px);border:1px solid rgba(244,236,216,0.2);border-bottom:none;border-radius:6px 6px 0 0;overflow:hidden">
-      <img src="uploads/pasted-1781859441838-0.png" alt="Grigliata sul fuoco" style="width:100%;height:100%;object-fit:cover;object-position:center 60%;display:block">
-      <div style="position:absolute;left:18px;bottom:14px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#f4ecd8;background:rgba(28,40,26,0.7);padding:6px 12px;border-radius:3px;backdrop-filter:blur(2px)">Edizione passata · Past edition</div>
-    </div>
-  </section>
+            <span>Lagorai · Trentino</span>
 
-  <!-- ===== MARQUEE ===== -->
-  <div style="background:#c2521b;color:#24331f;overflow:hidden;padding:11px 0;border-top:2px solid #24331f;border-bottom:2px solid #24331f">
-    <div style="display:flex;width:max-content;animation:hub-marquee 26s linear infinite;font-family:'Anton',sans-serif;text-transform:uppercase;font-size:18px;letter-spacing:3px;white-space:nowrap">
-      <span>&nbsp;Grigliata + Pizza ✦ Grill + Pizza ✦ Brace ✦ Birra ✦ Montagna ✦ Fuoco ✦ Amici ✦ Grigliata + Pizza ✦ Grill + Pizza ✦ Brace ✦ Birra ✦ Montagna ✦ Fuoco ✦ Amici ✦&nbsp;</span>
-      <span>&nbsp;Grigliata + Pizza ✦ Grill + Pizza ✦ Brace ✦ Birra ✦ Montagna ✦ Fuoco ✦ Amici ✦ Grigliata + Pizza ✦ Grill + Pizza ✦ Brace ✦ Birra ✦ Montagna ✦ Fuoco ✦ Amici ✦&nbsp;</span>
-    </div>
-  </div>
-
-  <!-- ===== INTRO / WHERE ===== -->
-  <section style="background:#e9ddc4;padding:clamp(56px,8vw,110px) clamp(20px,5vw,64px)">
-    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(32px,5vw,64px);align-items:start">
-      <div>
-        <span style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#8a5a36">01 — Dove & Quando / Where & When</span>
-        <h2 style="font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(34px,5vw,60px);line-height:0.92;margin-top:14px;color:#24331f">In montagna,<br>attorno al fuoco</h2>
-        <p style="font-size:17px;line-height:1.6;margin-top:20px;max-width:46ch">Niente sala riunioni: un rifugio nel Lagorai, due giorni con i colleghi dell'hub e gli amici. Si accende la brace, si stende l'impasto, si chiacchiera fino a tardi sotto le stelle.</p>
-        <p style="font-style:italic;font-size:15px;line-height:1.6;margin-top:12px;color:#5b6b4f;max-width:50ch">No meeting room. A cabin in the Lagorai, two days with the hub crew and friends — fire on, dough out, talking late under the stars.</p>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:16px">
-        <div style="border-radius:6px;overflow:hidden;height:clamp(200px,24vw,260px);border:1px solid #cbb892">
-          <img src="uploads/pasted-1781859453253-1.png" alt="La crew dell'hub" style="width:100%;height:100%;object-fit:cover;object-position:center 35%;display:block">
-        </div>
-        <div style="background:#24331f;color:#f4ecd8;border-radius:6px;padding:24px 26px">
-          <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#c2a87e">Date / Dates</div>
-          <div style="font-family:'Anton',sans-serif;font-size:32px;text-transform:uppercase;margin-top:8px">Sab 25 – Dom 26 Luglio</div>
-          <div style="font-size:14px;color:#a9b59f;margin-top:4px">Arrivo sabato dal primo pomeriggio · Arrive Sat from early afternoon</div>
-        </div>
-        <div style="background:#f7f0e1;border:1px solid #cbb892;border-radius:6px;padding:24px 26px">
-          <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a5a36">Luogo / Place</div>
-          <div style="font-family:'Anton',sans-serif;font-size:32px;text-transform:uppercase;margin-top:8px;color:#24331f">Lagorai, Trentino</div>
-          <div style="font-size:14px;color:#5b6b4f;margin-top:4px">Punto d'incontro e mappa nel gruppo · Meet point & map in the group chat</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PROGRAMMA ===== -->
-  <section id="programma" style="background:#24331f;color:#f4ecd8;padding:clamp(56px,8vw,110px) clamp(20px,5vw,64px)">
-    <div style="max-width:1100px;margin:0 auto">
-      <span style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#c2a87e">02 — Il Programma / The Programme</span>
-      <h2 style="font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(38px,6vw,72px);line-height:0.9;margin-top:14px">Due giorni, due fuochi</h2>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(24px,4vw,48px);margin-top:clamp(36px,5vw,64px)">
-
-        <div>
-          <div style="display:flex;align-items:baseline;gap:14px;border-bottom:2px solid #c2521b;padding-bottom:12px">
-            <span style="font-family:'Anton',sans-serif;font-size:40px;color:#c2521b">SAB 25</span>
-            <span style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#a9b59f">Grill day</span>
           </div>
-          <ul style="list-style:none;margin-top:20px;display:flex;flex-direction:column;gap:18px">
-            <li style="display:flex;gap:16px"><span style="font-family:'Space Mono',monospace;font-size:13px;color:#c2a87e;min-width:46px">15:00</span><span style="font-size:16px;line-height:1.4">Arrivo, tende & sacchi a pelo · <i style="color:#a9b59f">Arrival & set up</i></span></li>
-            <li style="display:flex;gap:16px"><span style="font-family:'Space Mono',monospace;font-size:13px;color:#c2a87e;min-width:46px">17:00</span><span style="font-size:16px;line-height:1.4">Si accende la brace · <i style="color:#a9b59f">Light the coals</i></span></li>
-            <li style="display:flex;gap:16px"><span style="font-family:'Space Mono',monospace;font-size:13px;color:#c2a87e;min-width:46px">19:30</span><span style="font-size:16px;line-height:1.4">Grigliata in grande stile · <i style="color:#a9b59f">The big grill</i></span></li>
-            <li style="display:flex;gap:16px"><span style="font-family:'Space Mono',monospace;font-size:13px;color:#c2a87e;min-width:46px">22:00</span><span style="font-size:16px;line-height:1.4">Falò, chitarra e stelle · <i style="color:#a9b59f">Bonfire & stars</i></span></li>
-          </ul>
-        </div>
 
-        <div>
-          <div style="display:flex;align-items:baseline;gap:14px;border-bottom:2px solid #c2521b;padding-bottom:12px">
-            <span style="font-family:'Anton',sans-serif;font-size:40px;color:#c2521b">DOM 26</span>
-            <span style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#a9b59f">Pizza day</span>
+
+
+          <h1
+            style="font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;line-height:0.84;letter-spacing:-1px;font-size:clamp(72px,17vw,260px);margin:clamp(28px,4vw,52px) 0 0;color:#f4ecd8">
+            Hub<span style="color: rgb(194, 82, 27);">rostata</span></h1>
+          <div
+            style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:28px;margin-top:clamp(24px,3vw,40px);padding-bottom:clamp(40px,6vw,72px)">
+            <div style="max-width:540px">
+              <p style="font-size:clamp(19px,2.2vw,26px);line-height:1.4;font-weight:500;color:#f4ecd8">Due giorni di
+                fuoco, farina e montagna. La grigliata-pizza party dell'hub, lassù nel Lagorai.</p>
+              <p
+                style="font-family:'Work Sans',sans-serif;font-style:italic;font-size:15px;line-height:1.5;color:#a9b59f;margin-top:10px">
+                Two days of fire, flour &amp; mountains — the hub's grill &amp; pizza party, up in the Lagorai.</p>
+            </div>
+            <div style="text-align:right">
+              <div
+                style="font-family:'Anton',sans-serif;font-size:clamp(40px,6vw,76px);line-height:0.9;color:#c2521b;text-transform:uppercase">
+                25–26</div>
+              <div
+                style="font-family:'Space Mono',monospace;font-size:14px;letter-spacing:3px;text-transform:uppercase;color:#d8c8a6;margin-top:4px">
+                Luglio 2026</div>
+            </div>
           </div>
-          <ul style="list-style:none;margin-top:20px;display:flex;flex-direction:column;gap:18px">
-            <li style="display:flex;gap:16px"><span style="font-family:'Space Mono',monospace;font-size:13px;color:#c2a87e;min-width:46px">09:30</span><span style="font-size:16px;line-height:1.4">Colazione & caffè in moka · <i style="color:#a9b59f">Breakfast & moka coffee</i></span></li>
-            <li style="display:flex;gap:16px"><span style="font-family:'Space Mono',monospace;font-size:13px;color:#c2a87e;min-width:46px">11:00</span><span style="font-size:16px;line-height:1.4">Passeggiata sul crinale · <i style="color:#a9b59f">Ridge walk</i></span></li>
-            <li style="display:flex;gap:16px"><span style="font-family:'Space Mono',monospace;font-size:13px;color:#c2a87e;min-width:46px">13:00</span><span style="font-size:16px;line-height:1.4">Forno a legna: pizza party · <i style="color:#a9b59f">Wood oven pizza</i></span></li>
-            <li style="display:flex;gap:16px"><span style="font-family:'Space Mono',monospace;font-size:13px;color:#c2a87e;min-width:46px">16:00</span><span style="font-size:16px;line-height:1.4">Riordino e saluti · <i style="color:#a9b59f">Pack up & goodbyes</i></span></li>
-          </ul>
+        </div>
+
+        <!-- hero image -->
+        <div
+          style="position:relative;max-width:1240px;margin:0 auto;height:clamp(220px,30vw,420px);border:1px solid rgba(244,236,216,0.2);border-bottom:none;border-radius:6px 6px 0 0;overflow:hidden">
+          <img src="uploads/pasted-1781859441838-0.png" alt="Grigliata sul fuoco"
+            style="width:100%;height:100%;object-fit:cover;object-position:center 60%;display:block">
+
+        </div>
+      </section>
+
+      <!-- ===== MARQUEE ===== -->
+      <div
+        style="background:#c2521b;color:#24331f;overflow:hidden;padding:11px 0;border-top:2px solid #24331f;border-bottom:2px solid #24331f">
+        <div
+          style="display:flex;width:max-content;animation:hub-marquee 26s linear infinite;font-family:'Anton',sans-serif;text-transform:uppercase;font-size:18px;letter-spacing:3px;white-space:nowrap">
+          <span>&nbsp;Grigliata + Pizza ✦ Grill + Pizza ✦ Brace ✦ Birra ✦ Montagna ✦ Fuoco ✦ Amici ✦ Grigliata + Pizza ✦
+            Grill + Pizza ✦ Brace ✦ Birra ✦ Montagna ✦ Fuoco ✦ Amici ✦&nbsp;</span>
+          <span>&nbsp;Grigliata + Pizza ✦ Grill + Pizza ✦ Brace ✦ Birra ✦ Montagna ✦ Fuoco ✦ Amici ✦ Grigliata + Pizza ✦
+            Grill + Pizza ✦ Brace ✦ Birra ✦ Montagna ✦ Fuoco ✦ Amici ✦&nbsp;</span>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ===== MENU ===== -->
-  <section id="menu" style="background:#e9ddc4;padding:clamp(56px,8vw,110px) clamp(20px,5vw,64px)">
-    <div style="max-width:1100px;margin:0 auto">
-      <span style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#8a5a36">03 — Il Menu / The Menu</span>
-      <h2 style="font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(38px,6vw,72px);line-height:0.9;margin-top:14px;color:#24331f">Brace & forno</h2>
+      <!-- ===== INTRO / WHERE ===== -->
+      <section style="background:#e9ddc4;padding:clamp(56px,8vw,110px) clamp(20px,5vw,64px)">
+        <div
+          style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(32px,5vw,64px);align-items:start">
+          <div>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:clamp(36px,5vw,56px)">
-        <div style="background:#24331f;color:#f4ecd8;border-radius:6px;padding:clamp(26px,3vw,36px);position:relative;overflow:hidden">
-          <span style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#c2521b">Sabato</span>
-          <h3 style="font-family:'Anton',sans-serif;font-size:clamp(30px,4vw,44px);text-transform:uppercase;margin-top:6px">La Grigliata</h3>
-          <ul style="list-style:none;margin-top:20px;display:flex;flex-direction:column;gap:12px;font-size:16px">
-            <li style="display:flex;justify-content:space-between;gap:14px;border-bottom:1px dotted rgba(244,236,216,0.25);padding-bottom:11px">Salsiccia & costine <span style="color:#a9b59f;font-style:italic">Sausage & ribs</span></li>
-            <li style="display:flex;justify-content:space-between;gap:14px;border-bottom:1px dotted rgba(244,236,216,0.25);padding-bottom:11px">Verdure alla brace <span style="color:#a9b59f;font-style:italic">Grilled veg</span></li>
-            <li style="display:flex;justify-content:space-between;gap:14px;border-bottom:1px dotted rgba(244,236,216,0.25);padding-bottom:11px">Formaggi di malga <span style="color:#a9b59f;font-style:italic">Alpine cheese</span></li>
-            <li style="display:flex;justify-content:space-between;gap:14px">Pane, salse & birra <span style="color:#a9b59f;font-style:italic">Bread, sauces & beer</span></li>
-          </ul>
-        </div>
-
-        <div style="background:#f7f0e1;border:1px solid #cbb892;color:#24331f;border-radius:6px;padding:clamp(26px,3vw,36px)">
-          <div style="border-radius:5px;overflow:hidden;height:170px;margin-bottom:22px">
-            <img src="uploads/pasted-1781859463931-0.png" alt="Pizza nel forno a legna" style="width:100%;height:100%;object-fit:cover;object-position:center 70%;display:block">
+            <h2
+              style="font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(34px,5vw,60px);line-height:0.92;margin-top:14px;color:#24331f">
+              In montagna,<br>attorno al fuoco</h2>
+            <p style="font-size:17px;line-height:1.6;margin-top:20px;max-width:46ch">Niente sala riunioni: un rifugio
+              nel Lagorai, due giorni con i colleghi dell'hub e gli amici. Si accende la brace, si stende l'impasto, si
+              chiacchiera fino a tardi sotto le stelle.</p>
+            <p style="font-style:italic;font-size:15px;line-height:1.6;margin-top:12px;color:#5b6b4f;max-width:50ch">No
+              meeting room. A cabin in the Lagorai, two days with the hub crew and friends — fire on, dough out, talking
+              late under the stars.</p>
           </div>
-          <span style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#c2521b">Domenica</span>
-          <h3 style="font-family:'Anton',sans-serif;font-size:clamp(30px,4vw,44px);text-transform:uppercase;margin-top:6px;color:#24331f">La Pizza</h3>
-          <ul style="list-style:none;margin-top:20px;display:flex;flex-direction:column;gap:12px;font-size:16px">
-            <li style="display:flex;justify-content:space-between;gap:14px;border-bottom:1px dotted #cbb892;padding-bottom:11px">Margherita di montagna <span style="color:#8a5a36;font-style:italic">Classic</span></li>
-            <li style="display:flex;justify-content:space-between;gap:14px;border-bottom:1px dotted #cbb892;padding-bottom:11px">Patate & speck <span style="color:#8a5a36;font-style:italic">Potato & speck</span></li>
-            <li style="display:flex;justify-content:space-between;gap:14px;border-bottom:1px dotted #cbb892;padding-bottom:11px">Funghi del bosco <span style="color:#8a5a36;font-style:italic">Forest mushroom</span></li>
-            <li style="display:flex;justify-content:space-between;gap:14px">Impasto fatto a mano <span style="color:#8a5a36;font-style:italic">Handmade dough</span></li>
-          </ul>
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div style="border-radius:6px;overflow:hidden;height:clamp(200px,24vw,260px);border:1px solid #cbb892">
+              <img src="uploads/pasted-1781859453253-1.png" alt="La crew dell'hub"
+                style="width:100%;height:100%;object-fit:cover;object-position:center 35%;display:block">
+            </div>
+            <div style="background:#24331f;color:#f4ecd8;border-radius:6px;padding:24px 26px">
+              <div
+                style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#c2a87e">
+                Date / Dates</div>
+              <div style="font-family:'Anton',sans-serif;font-size:32px;text-transform:uppercase;margin-top:8px">Sab 25
+                – Dom 26 Luglio</div>
+              <div style="font-size:14px;color:#a9b59f;margin-top:4px">Arrivo sabato dal primo pomeriggio · Arrive Sat
+                from early afternoon</div>
+            </div>
+            <div style="background:#f7f0e1;border:1px solid #cbb892;border-radius:6px;padding:24px 26px">
+              <div
+                style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a5a36">
+                Luogo / Place</div>
+              <div
+                style="font-family:'Anton',sans-serif;font-size:32px;text-transform:uppercase;margin-top:8px;color:#24331f">
+                Lagorai, Trentino</div>
+              <div style="font-size:14px;color:#5b6b4f;margin-top:4px">Punto d'incontro e mappa nel gruppo · Meet point
+                &amp; map in the group chat</div>
+            </div>
+          </div>
         </div>
-      </div>
-      <p style="font-family:'Space Mono',monospace;font-size:12px;color:#8a5a36;margin-top:22px;letter-spacing:0.5px">↳ Allergie o veg? Segnalalo nell'RSVP. / Allergies or veg? Note it in the RSVP.</p>
-    </div>
-  </section>
+      </section>
 
-  <!-- ===== PHOTO BAND ===== -->
-  <section style="position:relative;height:clamp(280px,40vw,460px);overflow:hidden">
-    <img src="uploads/pasted-1781859473336-0.png" alt="Forno a legna" style="width:100%;height:100%;object-fit:cover;object-position:center 45%;display:block">
-    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,40,26,0.78) 0%,rgba(28,40,26,0.25) 55%,transparent 100%)"></div>
-    <div style="position:absolute;inset:0;display:flex;align-items:center;padding:0 clamp(20px,5vw,64px)">
-      <div style="max-width:560px">
-        <span style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#f0c89a">Forno a legna · Wood oven</span>
-        <p style="font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(28px,4.5vw,52px);line-height:0.95;color:#f4ecd8;margin-top:12px">Si cuoce<br>fino a notte</p>
-      </div>
-    </div>
-  </section>
+      <!-- ===== PROGRAMMA ===== -->
+      <section id="programma"
+        style="background:#24331f;color:#f4ecd8;padding:clamp(56px,8vw,110px) clamp(20px,5vw,64px)">
+        <div style="max-width:1100px;margin:0 auto">
+          <span
+            style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#c2a87e">02
+            — Il Programma / The Programme</span>
+          <h2
+            style="font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(38px,6vw,72px);line-height:0.9;margin-top:14px">
+            Due giorni, due fuochi</h2>
 
-  <!-- ===== COSA PORTARE ===== -->
-  <section id="portare" style="background:#8a5a36;color:#f4ecd8;padding:clamp(56px,8vw,110px) clamp(20px,5vw,64px)">
-    <div style="max-width:1100px;margin:0 auto">
-      <span style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#f0d9b8">04 — Cosa Portare / What to Bring</span>
-      <h2 style="font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(38px,6vw,72px);line-height:0.9;margin-top:14px">Lo zaino giusto</h2>
+          <div
+            style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(24px,4vw,48px);margin-top:clamp(36px,5vw,64px)">
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:clamp(36px,5vw,56px)">
-        <div style="background:rgba(36,51,31,0.55);border:1px solid rgba(244,236,216,0.18);border-radius:6px;padding:22px"><div style="font-family:'Anton',sans-serif;font-size:22px;text-transform:uppercase;color:#f4ecd8">Per dormire</div><div style="font-size:14px;color:#e7d4b4;margin-top:8px;line-height:1.5">Tenda o posto in rifugio, sacco a pelo, materassino. <i>Tent or cabin spot, sleeping bag.</i></div></div>
-        <div style="background:rgba(36,51,31,0.55);border:1px solid rgba(244,236,216,0.18);border-radius:6px;padding:22px"><div style="font-family:'Anton',sans-serif;font-size:22px;text-transform:uppercase;color:#f4ecd8">Per il freddo</div><div style="font-size:14px;color:#e7d4b4;margin-top:8px;line-height:1.5">Pile, giacca, scarpe da trekking. La sera in quota fa freddo. <i>Layers & boots.</i></div></div>
-        <div style="background:rgba(36,51,31,0.55);border:1px solid rgba(244,236,216,0.18);border-radius:6px;padding:22px"><div style="font-family:'Anton',sans-serif;font-size:22px;text-transform:uppercase;color:#f4ecd8">In tavola</div><div style="font-size:14px;color:#e7d4b4;margin-top:8px;line-height:1.5">Una bottiglia da condividere & il tuo piatto/posata. <i>A bottle to share + your plate.</i></div></div>
-        <div style="background:rgba(36,51,31,0.55);border:1px solid rgba(244,236,216,0.18);border-radius:6px;padding:22px"><div style="font-family:'Anton',sans-serif;font-size:22px;text-transform:uppercase;color:#f4ecd8">Extra</div><div style="font-size:14px;color:#e7d4b4;margin-top:8px;line-height:1.5">Torcia, borraccia, repellente & buonumore. <i>Torch, water bottle, good vibes.</i></div></div>
-      </div>
-    </div>
-  </section>
+            <div>
+              <div
+                style="display:flex;align-items:baseline;gap:14px;border-bottom:2px solid #c2521b;padding-bottom:12px">
 
-  <!-- ===== RSVP ===== -->
-  <section id="rsvp" style="background:#24331f;color:#f4ecd8;padding:clamp(56px,8vw,120px) clamp(20px,5vw,64px)">
-    <div style="max-width:760px;margin:0 auto;text-align:center">
-      <span style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#c2a87e">05 — Ci sei? / Are you in?</span>
-      <h2 style="font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(44px,9vw,104px);line-height:0.86;margin-top:16px">Conferma<br><span style="color:#c2521b">la presenza</span></h2>
-      <p style="font-size:18px;line-height:1.5;margin-top:20px;color:#d8c8a6;max-width:48ch;margin-left:auto;margin-right:auto">Posti limitati attorno al fuoco. Dicci se ci sei entro il <b style="color:#f4ecd8">15 luglio</b>, così organizziamo brace, impasto e dormitorio.</p>
-      <p style="font-style:italic;font-size:15px;color:#a9b59f;margin-top:8px">Spots around the fire are limited — let us know by July 15.</p>
+                <span
+                  style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#a9b59f">COMING
+                  SOON</span>
+              </div>
 
-      <div style="background:#f7f0e1;border-radius:8px;padding:clamp(24px,4vw,40px);margin-top:36px;text-align:left;color:#24331f">
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px">
-          <label style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#8a5a36">Nome / Name</span><input type="text" placeholder="Il tuo nome" style="font-family:'Work Sans',sans-serif;font-size:15px;padding:12px 14px;border:1px solid #cbb892;border-radius:4px;background:#fff;color:#24331f"></label>
-          <label style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#8a5a36">In quanti / Headcount</span><input type="text" placeholder="es. 2" style="font-family:'Work Sans',sans-serif;font-size:15px;padding:12px 14px;border:1px solid #cbb892;border-radius:4px;background:#fff;color:#24331f"></label>
+            </div>
+
+
+          </div>
         </div>
-        <label style="display:flex;flex-direction:column;gap:6px;margin-top:16px"><span style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#8a5a36">Note / allergie</span><input type="text" placeholder="Veg, allergie, arrivo... / Veg, allergies, arrival..." style="font-family:'Work Sans',sans-serif;font-size:15px;padding:12px 14px;border:1px solid #cbb892;border-radius:4px;background:#fff;color:#24331f"></label>
-        <a href="mailto:?subject=RSVP%20Hubrostata%2025-26%20Luglio&body=Ci%20sono!%20Nome%3A%20...%20In%20quanti%3A%20..." style="display:block;text-align:center;font-family:'Anton',sans-serif;font-size:22px;letter-spacing:1px;text-transform:uppercase;background:#c2521b;color:#24331f;text-decoration:none;padding:16px;border-radius:4px;margin-top:22px" style-hover="background:#a9441391;background:#d35e22">Ci sono! / I'm in</a>
-        <p style="font-family:'Space Mono',monospace;font-size:11px;color:#8a5a36;text-align:center;margin-top:14px;letter-spacing:0.5px">…oppure scrivi direttamente nel gruppo dell'hub / or just message the group chat</p>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer style="background:#1c281a;color:#a9b59f;padding:clamp(36px,5vw,56px) clamp(20px,5vw,64px)">
-    <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between">
-      <span style="font-family:'Anton',sans-serif;font-size:28px;letter-spacing:2px;text-transform:uppercase;color:#f4ecd8">Hubrostata</span>
-      <div style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;display:flex;flex-wrap:wrap;gap:18px">
-        <span>25–26 Lug 2026</span>
-        <span>Lagorai · TN</span>
-        <span style="color:#c2521b">Ci vediamo in montagna ✦</span>
-      </div>
-    </div>
-  </footer>
+      <!-- ===== MENU ===== -->
+      <section id="menu" style="background:#e9ddc4;padding:clamp(56px,8vw,110px) clamp(20px,5vw,64px)">
+        <div style="max-width:1100px;margin:0 auto">
+          <span
+            style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#8a5a36">03
+            — Il Menu / The Menu</span>
+          <h2
+            style="font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(38px,6vw,72px);line-height:0.9;margin-top:14px;color:#24331f">
+            Brace &amp; forno</h2>
 
-</div>
-</x-dc>
+          <div
+            style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:clamp(36px,5vw,56px)">
+
+
+
+          </div>
+          <p
+            style="font-family:'Space Mono',monospace;font-size:12px;color:#8a5a36;margin-top:22px;letter-spacing:0.5px">
+            Coming Soon</p>
+        </div>
+      </section>
+
+      <!-- ===== PHOTO BAND ===== -->
+      <section style="position:relative;height:clamp(280px,40vw,460px);overflow:hidden">
+        <img src="uploads/pasted-1781859473336-0.png" alt="Forno a legna"
+          style="width:100%;height:100%;object-fit:cover;object-position:center 45%;display:block">
+        <div
+          style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,40,26,0.78) 0%,rgba(28,40,26,0.25) 55%,transparent 100%)">
+        </div>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;padding:0 clamp(20px,5vw,64px)">
+          <div style="max-width:560px">
+            <span
+              style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#f0c89a">Forno
+              a legna · Wood oven</span>
+            <p
+              style="font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(28px,4.5vw,52px);line-height:0.95;color:#f4ecd8;margin-top:12px">
+              Si cuoce<br>fino a notte</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== COSA PORTARE ===== -->
+      <section id="portare" style="background:#8a5a36;color:#f4ecd8;padding:clamp(56px,8vw,110px) clamp(20px,5vw,64px)">
+        <div style="max-width:1100px;margin:0 auto">
+
+
+
+          <h2
+            style="font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(38px,6vw,72px);line-height:0.9;margin-top:14px">
+            COSA PORTARE</h2>
+          <div
+            style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:clamp(36px,5vw,56px)">
+            <div
+              style="background:rgba(36,51,31,0.55);border:1px solid rgba(244,236,216,0.18);border-radius:6px;padding:22px">
+              <div style="font-family:'Anton',sans-serif;font-size:22px;text-transform:uppercase;color:#f4ecd8">BIRRA
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== RSVP ===== -->
+      <section id="rsvp" style="background:#24331f;color:#f4ecd8;padding:clamp(56px,8vw,120px) clamp(20px,5vw,64px)">
+        <div style="max-width:760px;margin:0 auto;text-align:center">
+          <span
+            style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#c2a87e">05
+            — Ci sei? / Are you in?</span>
+          <h2
+            style="font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(44px,9vw,104px);line-height:0.86;margin-top:16px">
+            Conferma<br><span style="color:#c2521b">la presenza</span></h2>
+          <p
+            style="font-size:18px;line-height:1.5;margin-top:20px;color:#d8c8a6;max-width:48ch;margin-left:auto;margin-right:auto">
+            Posti limitati attorno al fuoco. Dicci se ci sei entro il <b style="color:#f4ecd8">15 luglio</b>, così
+            organizziamo brace, impasto e dormitorio.</p>
+          <p style="font-style:italic;font-size:15px;color:#a9b59f;margin-top:8px">Spots around the fire are limited —
+            let us know by July 15.</p>
+
+          <div
+            style="background:#f7f0e1;border-radius:8px;padding:clamp(24px,4vw,40px);margin-top:36px;text-align:left;color:#24331f">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px">
+              <label style="display:flex;flex-direction:column;gap:6px"><span
+                  style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#8a5a36">Nome
+                  / Name</span><input type="text" placeholder="Il tuo nome"
+                  style="font-family:'Work Sans',sans-serif;font-size:15px;padding:12px 14px;border:1px solid #cbb892;border-radius:4px;background:#fff;color:#24331f"></label>
+              <label style="display:flex;flex-direction:column;gap:6px"><span
+                  style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#8a5a36">In
+                  quanti / Headcount</span><input type="text" placeholder="es. 2"
+                  style="font-family:'Work Sans',sans-serif;font-size:15px;padding:12px 14px;border:1px solid #cbb892;border-radius:4px;background:#fff;color:#24331f"></label>
+            </div>
+            <label style="display:flex;flex-direction:column;gap:6px;margin-top:16px"><span
+                style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#8a5a36">Note
+                / allergie</span><input type="text" placeholder="Veg, allergie, arrivo... / Veg, allergies, arrival..."
+                style="font-family:'Work Sans',sans-serif;font-size:15px;padding:12px 14px;border:1px solid #cbb892;border-radius:4px;background:#fff;color:#24331f"></label>
+            <a href="mailto:?subject=RSVP%20Hubrostata%2025-26%20Luglio&amp;body=Ci%20sono!%20Nome%3A%20...%20In%20quanti%3A%20..."
+              style="display:block;text-align:center;font-family:'Anton',sans-serif;font-size:22px;letter-spacing:1px;text-transform:uppercase;background:#c2521b;color:#24331f;text-decoration:none;padding:16px;border-radius:4px;margin-top:22px"
+              style-hover="background:#a9441391;background:#d35e22">Ci sono! / I'm in</a>
+            <p
+              style="font-family:'Space Mono',monospace;font-size:11px;color:#8a5a36;text-align:center;margin-top:14px;letter-spacing:0.5px">
+              …oppure scrivi direttamente nel gruppo dell'hub / or just message the group chat</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FOOTER ===== -->
+      <footer style="background:#1c281a;color:#a9b59f;padding:clamp(36px,5vw,56px) clamp(20px,5vw,64px)">
+        <div
+          style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between">
+          <span
+            style="font-family:'Anton',sans-serif;font-size:28px;letter-spacing:2px;text-transform:uppercase;color:#f4ecd8">Hubrostata</span>
+          <div
+            style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;display:flex;flex-wrap:wrap;gap:18px">
+            <span>25–26 Lug 2026</span>
+            <span>Lagorai · TN</span>
+            <span style="color:#c2521b">Ci vediamo in montagna ✦</span>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </x-dc>
 </body>
+
 </html>
